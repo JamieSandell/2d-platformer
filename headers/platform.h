@@ -1,0 +1,8 @@
+//
+// Created by jamie on 13/10/2026.
+//
+
+#ifndef INC_2D_PLATFORMER_PLATFORM_H
+#define INC_2D_PLATFORMER_PLATFORM_H
+
+#endif //INC_2D_PLATFORMER_PLATFORM_H
