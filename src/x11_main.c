@@ -25,6 +25,7 @@ int main(int argc, char **argv) {
         0x00000000 // background colour
     );
 
+    XSelectInput(display, window, ExposureMask | KeyPressMask);
     XMapWindow(display, window);
 
     bool is_running = true;
