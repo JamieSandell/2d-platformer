@@ -20,6 +20,9 @@ static LRESULT CALLBACK window_procedure(HWND window_handle, UINT message, WPARA
 }
 
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE previous_instance, LPSTR command_line, int command_show) {
+    UNREFERENCED_PARAMETER(previous_instance);
+    UNREFERENCED_PARAMETER(command_line);
+
     WNDCLASSEX window_class = {0};
     window_class.cbSize = sizeof(WNDCLASSEX);
     window_class.lpfnWndProc = window_procedure;
