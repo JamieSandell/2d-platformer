@@ -5,9 +5,29 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/mman.h>
 #include <X11/Xlib.h>
 
+#include <game.h>
+#include <platform.h>
+
+#define UNUSED(x) (void)(x)
+
 int main(int argc, char **argv) {
+    UNUSED(argc);
+    UNUSED(argv);
+
+    Framebuffer framebuffer = {0};
+    framebuffer.height = GAME_HEIGHT;
+    framebuffer.width = GAME_WIDTH;
+    framebuffer.pixels = mmap(
+        NULL,
+        GAME_WIDTH * GAME_HEIGHT * 4,
+        PROT_READ | PROT_WRITE,
+        MAP_PRIVATE | MAP_ANONYMOUS,
+        -1, 0
+        );
+
     Display *display = XOpenDisplay(NULL);
 
     if (!display) {

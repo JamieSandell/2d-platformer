@@ -13,6 +13,7 @@ endif()
 add_executable(2d_platformer
         src/game.c
         headers/platform.h
+        headers/game.h
 )
 target_include_directories(2d_platformer PRIVATE headers)
 target_compile_options(2d_platformer PRIVATE
@@ -30,8 +31,8 @@ target_compile_options(2d_platformer PRIVATE
         -Wnull-dereference
 )
 target_compile_options(2d_platformer PRIVATE
-        $<$<CONFIG:Debug>:-O0 -g>
-        $<$<CONFIG:Release>:-O2 -Werror>
+        "$<$<CONFIG:Debug>:-O0;-g>"
+        "$<$<CONFIG:Release>:-O2;-Werror>"
 )
 
 # Platform layer
