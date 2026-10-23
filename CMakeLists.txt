@@ -14,6 +14,7 @@ add_executable(2d_platformer
         src/game.c
         headers/platform.h
         headers/game.h
+        headers/colour.h
 )
 target_include_directories(2d_platformer PRIVATE headers)
 target_compile_options(2d_platformer PRIVATE
