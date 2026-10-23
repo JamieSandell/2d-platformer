@@ -16,7 +16,7 @@ typedef union {
     uint32_t rgba;
 } Colour;
 
-#define COLOUR_BLUE (Colour){.r = 0, .g = 0, .b = 255, .a = 255}
-#define COLOUR_GREEN (Colour){.r = 0, .g = 255, .b = 0, .a = 255}
-#define COLOUR_RED ((Colour){.r = 255, .g = 0, .b = 0, .a = 255})
+const Colour COLOUR_BLUE = {.r = 0, .g = 0, .b = 255, .a = 255};
+const Colour COLOUR_GREEN = {.r = 0, .g = 255, .b = 0, .a = 255};
+const Colour COLOUR_RED = {.r = 255, .g = 0, .b = 0, .a = 255};
 #endif //INC_2D_PLATFORMER_COLOUR_H
