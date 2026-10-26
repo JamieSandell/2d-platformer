@@ -7,11 +7,16 @@
 
 #include "platform.h"
 
-extern const int GAME_WIDTH;
-extern const int GAME_HEIGHT;
-extern const int GAME_BYTES_PER_PIXEL;
+extern const size_t GAME_WIDTH;
+extern const size_t GAME_HEIGHT;
+extern const size_t GAME_BYTES_PER_PIXEL;
 
-// renders to a frame buffer in RGBA.
-void game_render(FrameBuffer *frame_buffer);
+typedef struct {
+    uint64_t frame;
+    size_t scroll_offset;   // how many rows the stripes have moved
+} GameState;
+
+void game_update(GameState *state);
+void game_render(const GameState *state, const FrameBuffer *frame_buffer); // renders to a frame buffer in RGBA.
 
 #endif //INC_2D_PLATFORMER_GAME_H
