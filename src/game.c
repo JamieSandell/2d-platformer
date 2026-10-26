@@ -5,9 +5,13 @@
 #include "colour.h"
 #include "game.h"
 
-void game_render(Framebuffer *frame_buffer) {
-    int width = frame_buffer->width;
-    int height = frame_buffer->height;
+const int GAME_WIDTH = 320;
+const int GAME_HEIGHT = 180;
+const int GAME_BYTES_PER_PIXEL = 4;
+
+void game_render(FrameBuffer *frame_buffer) {
+    const int width = frame_buffer->width;
+    const int height = frame_buffer->height;
 
     for (int row = 0; row < height; ++row) {
         for (int column = 0; column < width; ++column) {

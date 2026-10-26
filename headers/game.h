@@ -7,10 +7,11 @@
 
 #include "platform.h"
 
-#define GAME_WIDTH 320
-#define GAME_HEIGHT 180
+extern const int GAME_WIDTH;
+extern const int GAME_HEIGHT;
+extern const int GAME_BYTES_PER_PIXEL;
 
 // renders to a frame buffer in RGBA.
-void game_render(Framebuffer *frame_buffer);
+void game_render(FrameBuffer *frame_buffer);
 
 #endif //INC_2D_PLATFORMER_GAME_H

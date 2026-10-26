@@ -10,6 +10,6 @@ typedef struct {
  uint32_t *pixels;
  int width;
  int height;
-} Framebuffer;
+} FrameBuffer;
 
 #endif //INC_2D_PLATFORMER_PLATFORM_H
